@@ -1,0 +1,339 @@
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Configuration", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Subsubsection"],
+
+Cell["\<\
+This notebook produces a sample graph using MaTeX to match the fonts on the \
+rest of the poster on labels and annotations.\
+\>", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MaTeX", "Subsubsection"],
+
+Cell["\<\
+This notebook uses the MaTeX package, which is available from \
+https://github.com/szhorvat/MaTeX.\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"<<", "MaTeX`"}]], "Input",
+ InitializationCell->True],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetOptions", "[", 
+   RowBox[{"MaTeX", ",", 
+    RowBox[{"\"\<Preamble\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<\\\\usepackage{arev}\>\"", ",", "\"\<\\\\usepackage{xcolor}\>\""}],
+       "}"}]}]}], "]"}], ";"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sundries", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$OutputDirectory", "=", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}]], "Input",
+ InitializationCell->True]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Figure", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"figure", "=", 
+    RowBox[{"Show", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Cos", "[", "\[Omega]t", "]"}], "\[IndentingNewLine]", ",", 
+          
+          RowBox[{"{", 
+           RowBox[{"\[Omega]t", ",", "0", ",", 
+            RowBox[{"2", " ", "2", "\[Pi]"}]}], "}"}], "\[IndentingNewLine]", 
+          ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"Darker", "[", 
+            RowBox[{"Green", ",", "0.3"}], "]"}]}]}], "\[IndentingNewLine]", 
+         "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"Inset", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"MaTeX", "[", 
+            RowBox[{
+            "\"\<\\\\omega t = \
+\\\\frac{3}{2}\\\\sqrt{\\\\alpha\\\\gamma}\\\\pi\>\"", ",", 
+             RowBox[{"FontSize", "\[Rule]", "10"}], ",", 
+             RowBox[{"Magnification", "\[Rule]", "0.4"}]}], "]"}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"2", "\[Pi]"}], "-", 
+              RowBox[{"50", "\[Degree]"}]}], ",", 
+             RowBox[{"-", "0.7"}]}], "}"}], ",", 
+           RowBox[{"Scaled", "[", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0.65"}], "}"}], "]"}]}], "]"}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Thickness", "[", "0.005", "]"}], ",", 
+           RowBox[{"Arrowheads", "[", "0.035", "]"}], ",", 
+           RowBox[{"Arrow", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"2", "\[Pi]"}], "-", 
+                 RowBox[{"50", "\[Degree]"}]}], ",", 
+                RowBox[{"-", "0.7"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 FractionBox["3", "2"], "\[Pi]"}], ",", "0"}], "}"}]}], "}"}],
+             "]"}]}], "}"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+      "\[IndentingNewLine]", ",", 
+      RowBox[{"ImageSize", "\[Rule]", "145"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"Frame", "\[Rule]", "True"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"PlotRangePadding", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"None", ",", "Automatic"}], "}"}]}], "\[IndentingNewLine]", 
+      ",", 
+      RowBox[{"Axes", "\[Rule]", "None"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"PlotLabel", "\[Rule]", 
+       RowBox[{"MaTeX", "[", "\[IndentingNewLine]", 
+        RowBox[{
+        "\"\<\\\\color{white}\\\\chi(t)=\\\\cos\\\\mathopen{}\\\\left(\\\\\
+frac{\\\\omega t}{\\\\sqrt{\\\\alpha\\\\gamma}}\\\\right)\\\\mathclose{} = \\\
+\\sum_{n=0}^\\\\infty \\\\frac{(-1)^{2n}}{(2n)!} \\\\frac{(\\\\omega \
+t)^{2n}}{\\\\alpha^{n}\\\\gamma^{n}}\>\"", "\[IndentingNewLine]", ",", 
+         RowBox[{"FontSize", "\[Rule]", "12"}], ",", 
+         RowBox[{"Magnification", "\[Rule]", "0.45"}]}], 
+        "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", ",", 
+      RowBox[{"FrameTicks", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Join", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"#", ",", 
+                 RowBox[{"MaTeX", "[", 
+                  RowBox[{
+                   RowBox[{"\"\<\\\\color{white}\>\"", "<>", 
+                    RowBox[{"ToString", "[", 
+                    RowBox[{"PaddedForm", "[", 
+                    RowBox[{"#", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}], "]"}]}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
+                   RowBox[{"Magnification", "\[Rule]", "0.35"}]}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.02", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{
+                RowBox[{"-", "1"}], ",", "1", ",", "0.25"}], "]"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"#", ",", "\"\<\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.01", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{
+                RowBox[{"-", "1.05"}], ",", "1.05", ",", "0.05"}], "]"}]}]}], 
+            "\[IndentingNewLine]", "]"}], ",", 
+           RowBox[{"Join", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"#", ",", "\"\<\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.02", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{
+                RowBox[{"-", "1"}], ",", "1", ",", "0.25"}], "]"}]}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"#", ",", "\"\<\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.01", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{
+                RowBox[{"-", "1.05"}], ",", "1.05", ",", "0.05"}], "]"}]}]}], 
+            "\[IndentingNewLine]", "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Join", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"#", " ", "\[Pi]"}], ",", 
+                 RowBox[{"MaTeX", "[", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"\"\<\\\\color{white}\>\"", "<>", 
+                    RowBox[{"StringReplace", "[", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"ToString", "[", 
+                    RowBox[{"Numerator", "[", "#", "]"}], "]"}], "<>", 
+                    "\"\<\\\\pi/\>\"", "<>", 
+                    RowBox[{"ToString", "[", 
+                    RowBox[{"Denominator", "[", "#", "]"}], "]"}]}], 
+                    "\[IndentingNewLine]", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\"\</1\>\"", "\[Rule]", "\"\<\>\""}], ",", 
+                    RowBox[{"\"\<0\\\\pi\>\"", "\[Rule]", "\"\<0\>\""}], ",", 
+                    
+                    RowBox[{
+                    "\"\<1\\\\pi\>\"", "\[Rule]", "\"\<\\\\pi\>\""}]}], 
+                    "}"}]}], "]"}]}], "\[IndentingNewLine]", ",", 
+                   RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
+                   RowBox[{"Magnification", "\[Rule]", "0.35"}]}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.02", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{"0", ",", "4", ",", 
+                RowBox[{"1", "/", "2"}]}], "]"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"#", ",", "\"\<\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.01", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{"0", ",", 
+                RowBox[{"4", "\[Pi]"}], ",", 
+                RowBox[{"15.", "\[Degree]"}]}], "]"}]}]}], 
+            "\[IndentingNewLine]", "]"}], ",", 
+           RowBox[{"Join", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.02", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{"0", ",", "4", ",", 
+                RowBox[{"1", "/", "2"}]}], "]"}]}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"#", ",", "\"\<\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0.01", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{"0", ",", 
+                RowBox[{"4", "\[Pi]"}], ",", 
+                RowBox[{"15.", "\[Degree]"}]}], "]"}]}]}], 
+            "\[IndentingNewLine]", "]"}]}], "}"}]}], "}"}]}], 
+      "\[IndentingNewLine]", ",", 
+      RowBox[{"FrameLabel", "\[Rule]", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"MaTeX", "[", 
+          RowBox[{
+           RowBox[{
+           "\"\<\\\\color{white}\>\"", "<>", 
+            "\"\<\\\\omega t/\\\\sqrt{\\\\alpha\\\\gamma}\>\""}], ",", 
+           RowBox[{"FontSize", "\[Rule]", "12"}], ",", 
+           RowBox[{"Magnification", "\[Rule]", "0.35"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"MaTeX", "[", 
+          RowBox[{
+           RowBox[{"\"\<\\\\color{white}\>\"", "<>", "\"\<\\\\chi(t)\>\""}], 
+           ",", 
+           RowBox[{"FontSize", "\[Rule]", "12"}], ",", 
+           RowBox[{"Magnification", "\[Rule]", "0.35"}]}], "]"}]}], 
+        "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", ",", 
+      RowBox[{"Prolog", "\[Rule]", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"GrayLevel", "[", "0.95", "]"}], ",", 
+         RowBox[{"FilledCurve", "[", 
+          RowBox[{"{", 
+           RowBox[{"{", 
+            RowBox[{"Line", "[", 
+             RowBox[{"Scaled", "/@", 
+              RowBox[{"(", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "1"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}]}], "}"}], ")"}]}], "]"}], 
+            "}"}], "}"}], "]"}], 
+         RowBox[{"(*", "background", "*)"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"GrayLevel", "[", "0.6", "]"}], ",", 
+         RowBox[{"Line", "[", 
+          RowBox[{"Scaled", "/@", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0.5"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "0.5"}], "}"}]}], "}"}]}], "]"}]}], 
+        RowBox[{"(*", "axis", "*)"}], "\[IndentingNewLine]", "}"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Magnify", "[", 
+    RowBox[{"figure", ",", "5"}], "]"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"FileByteCount", "[", 
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "$OutputDirectory", ",", "\"\<Images\>\"", ",", 
+       "\"\<sample-figure.pdf\>\""}], "}"}], "]"}], ",", "figure", ",", 
+    RowBox[{"Background", "\[Rule]", "None"}]}], "]"}], "]"}]}], "Input"],
+
+Cell[BoxData["28935"], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1188, 911},
+WindowMargins->{{388, Automatic}, {Automatic, 36}},
+PrivateNotebookOptions->{"FileOutlineCache"->False},
+TrackCellChangeTimes->False,
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
