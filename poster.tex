@@ -113,7 +113,10 @@
     boxshade=plain,
     columns=2
 }
-{}{}{}{}  %%%% The standard baposter title settings are not flexible enough, so this sets them empty, and then re-creates them anew inside a standard headerbox.
+{
+%\vspace{5mm}
+%\includegraphics[width=0.16\textwidth]{Logos/ICFO-trimmed.png}
+}{}{}{}  %%%% The standard baposter title settings are not flexible enough, so this sets them empty, and then re-creates them anew inside a standard headerbox.
 
 
 
@@ -123,22 +126,34 @@
 
 %%%%%%%  Title box.
 \headerbox{}{
-name=titlebox, span=2, column=0, row=0, boxheaderheight=0mm, 
+name=toplogobox, span=2, column=0, row=0, boxheaderheight=0mm, 
+	headerColorOne=white,
+	headerColorTwo=white,
+    boxColorOne=white, 
+    boxColorTwo=white,
+    boxshade=shadelr
+}{
+\vspace{5mm}
+\includegraphics[width=0.16\textwidth]{Logos/ICFO-trimmed.png}
+}
+
+\headerbox{}{
+name=titlebox, span=2, column=0, row=0, boxheaderheight=0mm, below=toplogobox,
 	headerColorOne=icfoblue,
 	headerColorTwo=icfoblue,
     boxColorOne=icfoblue, 
     boxColorTwo=icfoblue,
     boxshade=shadelr
 }{
-\vspace{5mm}
+\vspace{4mm}
 \begin{minipage}{0.99\textwidth}
-\begin{tabular}{p{0.025\textwidth}p{0.16\textwidth}p{0.015\textwidth}p{0.72\textwidth}}
+\begin{tabular}{p{0.0001\textwidth}p{0.95\textwidth}}
 &
-\vspace{0.5mm}
-\includegraphics[width=0.16\textwidth,valign=T]{Logos/ICFO.png}
-&&
+%\vspace{0.5mm}
+%\includegraphics[width=0.16\textwidth,valign=T]{Logos/ICFO.png}
+%&&
 \vspace{0pt}
-\begin{minipage}{0.72\textwidth}
+\begin{minipage}{0.94\textwidth}
 \raggedright
 \setstretch{2.7}
 %
