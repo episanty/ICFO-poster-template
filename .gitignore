@@ -1,3 +1,6 @@
 .hg/*
 .hgignore
 Original template/*
+*.aux
+*.log
+*.synctex.gz
