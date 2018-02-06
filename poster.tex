@@ -40,6 +40,7 @@
 
 \definecolor{bordercol}{RGB}{40,40,40}
 \definecolor{headerfontcol}{RGB}{0,0,0}
+\definecolor{icfoblue}{RGB}{41,62,165}
 %
 \definecolor{icfogreen}{RGB}{161,207,15}
 \definecolor{icfogray1}{RGB}{233,233,233}
@@ -64,32 +65,37 @@
 %%% Also try interchanging the order with the fontspec package, and removing the no-math option from the latter
 
 
-%%% The font considerations here *require* compilation with lualatex instead of pdflatex.
-\usepackage[no-math]{fontspec}
-\setmainfont{swiss.ttf}[
-   BoldFont = swissb.ttf ,
-   ItalicFont = swissi.ttf ,
-   BoldItalicFont = swissbi.ttf
- ]
-%
-\newcommand{\titlefont}{\bf \fontsize{26pt}{28pt} \selectfont}
-\newcommand{\authorfont}{\bf \Large}
-\newcommand{\headerfont}{\fontspec{swissk.ttf}\fontsize{14pt}{16pt}\selectfont}
-\newcommand{\subheaderfont}{\fontspec{swissk.ttf}\fontsize{11pt}{13pt}\selectfont}
-\newcommand{\acknowledgementsfont}{\fontsize{8.5pt}{10.5pt}\selectfont}
-\newcommand{\footerfont}{\fontsize{5pt}{7pt}\selectfont}
-
-%%%% In the absence of lualatex, use instead e.g.
-%%\usepackage[scaled]{helvet}
-%%\renewcommand\familydefault{\sfdefault} 
-%%\usepackage[T1]{fontenc}
+%%%% The font considerations here *require* compilation with lualatex instead of pdflatex.
+%\usepackage[no-math]{fontspec}
+%\setmainfont{swiss.ttf}[
+%   BoldFont = swissb.ttf ,
+%   ItalicFont = swissi.ttf ,
+%   BoldItalicFont = swissbi.ttf
+% ]
 %%
-%%\newcommand{\titlefont}{\bf \Huge}
-%%\newcommand{\authorfont}{\bf \Large}
-%%\newcommand{\headerfont}{\bf \Large}
-%%\newcommand{\subheaderfont}{\bf \large}
-%%\newcommand{\acknowledgementsfont}{\small}
-%%\newcommand{\footerfont}{\footnotesize}
+%\newcommand{\titlefont}{\bf \fontsize{26pt}{28pt} \selectfont}
+%\newcommand{\authorfont}{\bf \Large}
+%\newcommand{\headerfont}{\fontspec{swissk.ttf}\fontsize{14pt}{16pt}\selectfont}
+%\newcommand{\subheaderfont}{\fontspec{swissk.ttf}\fontsize{11pt}{13pt}\selectfont}
+%\newcommand{\acknowledgementsfont}{\fontsize{8.5pt}{10.5pt}\selectfont}
+%\newcommand{\footerfont}{\fontsize{5pt}{7pt}\selectfont}
+
+
+
+%% In the absence of lualatex, use instead e.g.
+
+
+
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+\newcommand{\titlefont}{\bf \Huge \color{white}}
+\newcommand{\authorfont}{\bf \Large}
+\newcommand{\headerfont}{\bf \Large}
+\newcommand{\subheaderfont}{\bf \large}
+\newcommand{\acknowledgementsfont}{\small}
+\newcommand{\footerfont}{\footnotesize}
 
 
 
@@ -136,10 +142,10 @@
 %%%%%%%  Title box.
 \headerbox{}{
 name=titlebox, span=2, column=0, row=0, boxheaderheight=0mm, 
-	headerColorOne=icfogreen,
-	headerColorTwo=icfogreen,
-    boxColorOne=icfogreen, 
-    boxColorTwo=icfogreen,
+	headerColorOne=icfoblue,
+	headerColorTwo=icfoblue,
+    boxColorOne=icfoblue, 
+    boxColorTwo=icfoblue,
     boxshade=shadelr
 }{
 \vspace{5mm}
@@ -153,20 +159,25 @@ name=titlebox, span=2, column=0, row=0, boxheaderheight=0mm,
 \begin{minipage}{0.72\textwidth}
 \raggedright
 \setstretch{2.7}
+%
+\color{white}
+\rule{\textwidth}{3pt}
+
+%
 { \titlefont 
 %
-Title of the project will go here, font Swiss721 Black BT in size huge and justified to the left
+Title of the project will go here, font Arial Black BT in size huge 
 %
 }\\[3mm]
 \setstretch{1.5}
-\textcolor{authorgray}{
+\textcolor{white}{
 \authorfont
 %
 Names of authors will go here in dark grey using the font Swiss721 Bold BT in size 48 and justified to the left
 %
 }\\[2mm]
 \setstretch{1.25}
-\textcolor{authorgray}{
+\textcolor{white}{
 \small
 %
 Affiliation, departments/groups\\
@@ -217,7 +228,7 @@ INTRODUCTION OR ABSTRACT
 }{
 name=abstract,span=2,column=0,below=titlebox, headerColorOne=white, headerColorTwo=white, boxColorOne=white
 }{
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis convallis laoreet. Proin semper augue faucibus arcu sollicitudin laoreet. In et mi viverra nulla suscipit euismod. Quisque at erat leo. Nullam mollis tortor in arcu suscipit nec venenatis tellus gravida. Nunc in justo quam, et lacinia lacus. Sed rhoncus, odio eu condimentum mattis, nunc massa gravida neque, sollicitudin auctor metus odio in erat. Suspendisse vitae velit eros, vel vehicula quam. Phasellus lorem purus, pellentesque eget pharetra eget, pulvinar a tellus.
+\textbf{Um volores vendae. Et eliquat qui ratemolorum resti dolupta sequiss inissit dita sum quae dolupta temperchil enihil maximet aut distemporum} auta provita volores ma et et, cor recum quis eium quostrum fuga. Xerae nobitius eos remporem hilia volut ut alitas vitatibea nat as everum eos doluptatem am ut autem dunt officipieni corepeditis nus sunt idis moluptatur
 
 \vspace{2mm}
 }
