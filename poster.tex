@@ -6,15 +6,9 @@
 %
 %This is a LaTeX poster template designed to match the existing (powerpoint) poster template for ICFO - The Institute of Photonic Sciences, Barcelona.
 %
-%This template uses the baposter.cls LaTeX class, available from http://www.brian-amberg.de/uni/poster/, and it requires LuaLaTeX, and the Swiss 721 font, to compile correctly in its standard form. To compile, the Swiss 721 font should be installed in the standard system directory, and (all being well) the fontspec package will get it from there. Given that, compilation is as simple as
+%This template uses the baposter.cls LaTeX class, available from http://www.brian-amberg.de/uni/poster/
 %
-%    lualatex poster.tex
-%
-%Given the dependence on fontspec, compiling with pdflatex will not work. If lualatex is not available, remove the fontspec dependence and default to the helvetica-based sans-serif fonts below it; it will compile, though it won't be too pretty.
-%
-%--------------------
-%
-%Created by Emilio Pisanty, 2017-09-20, based on existing ICFO materials
+%Created by Emilio Pisanty, 2017-2018, based on existing ICFO materials
 
 
 \documentclass[a0paper,portrait]{baposter}
@@ -113,10 +107,7 @@
     boxshade=plain,
     columns=2
 }
-{
-%\vspace{5mm}
-%\includegraphics[width=0.16\textwidth]{Logos/ICFO-trimmed.png}
-}{}{}{}  %%%% The standard baposter title settings are not flexible enough, so this sets them empty, and then re-creates them anew inside a standard headerbox.
+{}{}{}{}  %%%% The standard baposter title settings are not flexible enough, so this sets them empty, and then re-creates them anew inside a standard headerbox.
 
 
 
@@ -149,9 +140,6 @@ name=titlebox, span=2, column=0, row=0, boxheaderheight=0mm, below=toplogobox,
 \begin{minipage}{0.99\textwidth}
 \begin{tabular}{p{0.0001\textwidth}p{0.95\textwidth}}
 &
-%\vspace{0.5mm}
-%\includegraphics[width=0.16\textwidth,valign=T]{Logos/ICFO.png}
-%&&
 \vspace{0pt}
 \begin{minipage}{0.94\textwidth}
 \raggedright
@@ -254,10 +242,6 @@ name=abstract,span=2,column=0,below=titlebox, headerfont={\bf \Large \color{blac
 
 
 
-{\bf \large \color{white}}
-
-
-
 
 
 
@@ -289,7 +273,6 @@ though \texttt{\textbackslash{}mathscr} requires some attention and  \texttt{\te
 
 
 \headerbox{}{name=background2, column=0, boxheaderheight=0mm, below=background
-%, row=0.59 %% use explicit numeric row instead of `below` command to join with the box above. In that case, use an extra \vspace{} on the background box to extend the lower lip.
 }{
 {\subheaderfont
 PROIN AC CONVALLIS SAPIEN.
