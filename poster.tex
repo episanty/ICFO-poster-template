@@ -57,38 +57,16 @@
 \geometry{tmargin=0mm,bmargin=3.5mm,lmargin=9mm,rmargin=9mm}
 
 %%% Sans-serif maths
-%\usepackage{arev}
+\usepackage{sansmathfonts}
 
 %%% other options that work OK:
 %\usepackage[helvet]{sfmath}
 %\usepackage[tx]{sfmath}
 %\usepackage[px]{sfmath}
 %\usepackage[cm]{sfmath}
-%%% Also try interchanging the order with the fontspec package, and removing the no-math option from the latter
 
 
-%%%% The font considerations here *require* compilation with lualatex instead of pdflatex.
-%\usepackage[no-math]{fontspec}
-%\setmainfont{swiss.ttf}[
-%   BoldFont = swissb.ttf ,
-%   ItalicFont = swissi.ttf ,
-%   BoldItalicFont = swissbi.ttf
-% ]
-%%
-%\newcommand{\titlefont}{\bf \fontsize{26pt}{28pt} \selectfont}
-%\newcommand{\authorfont}{\bf \Large}
-%\newcommand{\headerfont}{\fontspec{swissk.ttf}\fontsize{14pt}{16pt}\selectfont}
-%\newcommand{\subheaderfont}{\fontspec{swissk.ttf}\fontsize{11pt}{13pt}\selectfont}
-%\newcommand{\acknowledgementsfont}{\fontsize{8.5pt}{10.5pt}\selectfont}
-%\newcommand{\footerfont}{\fontsize{5pt}{7pt}\selectfont}
-
-
-
-%% In the absence of lualatex, use instead e.g.
-
-
-
-\usepackage{sansmathfonts}
+%%% Core font - Helvetica instead of Arial because non-xetex TeX doesn't have Arial.
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc}
