@@ -33,8 +33,8 @@ Cell[BoxData[
     RowBox[{"\"\<Preamble\>\"", "\[Rule]", 
      RowBox[{"{", 
       RowBox[{
-      "\"\<\\\\usepackage{arev}\>\"", ",", "\"\<\\\\usepackage{xcolor}\>\""}],
-       "}"}]}]}], "]"}], ";"}]], "Input"]
+      "\"\<\\\\usepackage{sansmathfonts}\>\"", ",", 
+       "\"\<\\\\usepackage{xcolor}\>\""}], "}"}]}]}], "]"}], ";"}]], "Input"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -72,9 +72,14 @@ Cell[BoxData[{
             RowBox[{"2", " ", "2", "\[Pi]"}]}], "}"}], "\[IndentingNewLine]", 
           ",", 
           RowBox[{"PlotStyle", "\[Rule]", 
-           RowBox[{"Darker", "[", 
-            RowBox[{"Green", ",", "0.3"}], "]"}]}]}], "\[IndentingNewLine]", 
-         "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"RGBColor", "[", 
+            RowBox[{"0.161", ",", "0.243", ",", "0.612"}], "]"}]}], 
+          "\[IndentingNewLine]", ",", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.05"}], ",", "1.05"}], "}"}]}]}], 
+         "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
         RowBox[{"Graphics", "[", 
          RowBox[{"Inset", "[", "\[IndentingNewLine]", 
           RowBox[{
@@ -276,25 +281,6 @@ t)^{2n}}{\\\\alpha^{n}\\\\gamma^{n}}\>\"", "\[IndentingNewLine]", ",",
       RowBox[{"Prolog", "\[Rule]", 
        RowBox[{"{", "\[IndentingNewLine]", 
         RowBox[{
-         RowBox[{"GrayLevel", "[", "0.95", "]"}], ",", 
-         RowBox[{"FilledCurve", "[", 
-          RowBox[{"{", 
-           RowBox[{"{", 
-            RowBox[{"Line", "[", 
-             RowBox[{"Scaled", "/@", 
-              RowBox[{"(", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "0"}], "}"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"1", ",", "0"}], "}"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"1", ",", "1"}], "}"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "1"}], "}"}]}], "}"}], ")"}]}], "]"}], 
-            "}"}], "}"}], "]"}], 
-         RowBox[{"(*", "background", "*)"}], ",", "\[IndentingNewLine]", 
          RowBox[{"GrayLevel", "[", "0.6", "]"}], ",", 
          RowBox[{"Line", "[", 
           RowBox[{"Scaled", "/@", 
@@ -319,12 +305,12 @@ t)^{2n}}{\\\\alpha^{n}\\\\gamma^{n}}\>\"", "\[IndentingNewLine]", ",",
        "\"\<sample-figure.pdf\>\""}], "}"}], "]"}], ",", "figure", ",", 
     RowBox[{"Background", "\[Rule]", "None"}]}], "]"}], "]"}]}], "Input"],
 
-Cell[BoxData["28899"], "Output"]
+Cell[BoxData["34439"], "Output"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1188, 911},
-WindowMargins->{{378, Automatic}, {Automatic, 26}},
+WindowMargins->{{360, Automatic}, {Automatic, 44}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 TrackCellChangeTimes->False,
 FrontEndVersion->"10.0 for Linux x86 (64-bit) (December 4, 2014)",

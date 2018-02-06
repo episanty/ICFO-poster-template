@@ -28,7 +28,9 @@
 \usepackage{multicol}
 \usepackage{amsmath,amssymb}
 \usepackage{mathrsfs}        % For \mathscr
-
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{colortbl}
 
 
 %%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -196,40 +198,8 @@ Affiliation, departments/groups
 
 %%% Bottom logos. Typeset at the start because (i) they're a formality, and (ii) the bottom content boxes require this to be defined for the above=bottomlogos option to work.
 
-\headerbox{}
-{name=bottomlogos, span=2, column=0, boxheaderheight=1.5mm, boxColorOne=white, headerColorOne=white, headerColorTwo=white, above=bottom}{
-\newlength{\logoheight}
-\setlength{\logoheight}{8mm}
-\begin{center}
-\begin{tabular}{cccccccc}
-\includegraphics[height=\logoheight]{Logos/GeneralitatDeCatalunya.png} & 
-\includegraphics[height=\logoheight]{Logos/UPC.png} & 
-\includegraphics[height=\logoheight]{Logos/Fundacio-CELLEX.png} & 
-\includegraphics[height=\logoheight]{Logos/Fundacio-Mir-Puig.png} & 
-\includegraphics[height=\logoheight]{Logos/Severo-Ochoa.png} & 
-\includegraphics[height=\logoheight]{Logos/MINECO.png} & 
-\includegraphics[height=\logoheight]{Logos/UE-FEDER.png} & 
-\includegraphics[height=\logoheight]{Logos/ICREA.png} 
-\end{tabular}
-
-\vspace{1mm}
-\footerfont
-ICFO $\cdot$ The Institute of Photonic Sciences | Av. Carl Friedrich Gauss, 3 $\cdot$ Castelldefels $\cdot$ Barcelona
-\end{center}
-}
-
-
 %\headerbox{}
-%{name=bottomlogos2, span=2, column=0, boxheaderheight=1.5mm, boxColorOne=white, headerColorOne=white, headerColorTwo=white, above=bottom}{
-%\begin{center}
-%\footerfont
-%ICFO $\cdot$ The Institute of Photonic Sciences | Av. Carl Friedrich Gauss, 3 $\cdot$ Castelldefels $\cdot$ Barcelona
-%\end{center}
-%}
-
-
-%\headerbox{}
-%{name=bottomlogos, span=2, column=0, boxheaderheight=1.5mm, boxColorOne=white, headerColorOne=white, headerColorTwo=white, above=bottomlogos2, aligned=bottom}{
+%{name=bottomlogos, span=2, column=0, boxheaderheight=1.5mm, boxColorOne=white, headerColorOne=white, headerColorTwo=white, above=bottom}{
 %\newlength{\logoheight}
 %\setlength{\logoheight}{8mm}
 %\begin{center}
@@ -243,8 +213,66 @@ ICFO $\cdot$ The Institute of Photonic Sciences | Av. Carl Friedrich Gauss, 3 $\
 %\includegraphics[height=\logoheight]{Logos/UE-FEDER.png} & 
 %\includegraphics[height=\logoheight]{Logos/ICREA.png} 
 %\end{tabular}
+%
+%\vspace{1mm}
+%\footerfont
+%ICFO $\cdot$ The Institute of Photonic Sciences | Av. Carl Friedrich Gauss, 3 $\cdot$ Castelldefels $\cdot$ Barcelona
 %\end{center}
 %}
+
+
+\headerbox{}
+{name=bottomlogos, span=2, column=0, boxheaderheight=1.5mm, boxColorOne=white, headerColorOne=white, headerColorTwo=white, above=bottom}{
+\newlength{\logoheight}
+\setlength{\logoheight}{6mm}
+\begin{center}
+%\begin{tabular}{cccccccc}
+%\includegraphics[height=\logoheight]{Logos/GeneralitatDeCatalunya.png} & 
+%\includegraphics[height=\logoheight]{Logos/UPC.png} & 
+%\includegraphics[height=\logoheight]{Logos/Fundacio-CELLEX.png} & 
+%\includegraphics[height=\logoheight]{Logos/Fundacio-Mir-Puig.png} & 
+%\includegraphics[height=\logoheight]{Logos/Severo-Ochoa.png} & 
+%\includegraphics[height=\logoheight]{Logos/MINECO.png} & 
+%\includegraphics[height=\logoheight]{Logos/UE-FEDER.png} & 
+%\includegraphics[height=\logoheight]{Logos/ICREA.png} 
+%\end{tabular}
+\setlength{\tabcolsep}{0mm}
+
+\begin{tabular}{m{0.5\textwidth} m{0.32\textwidth} m{0.14\textwidth}}
+\begin{tabular}{llll}
+\multicolumn{4}{l}{\color{icfoblue} \small Trustees: }
+\\ \arrayrulecolor{icfoblue}\hline
+&&& \\[-2mm]
+\includegraphics[height=\logoheight]{Logos/GeneralitatDeCatalunya.png} & \hspace{2mm}
+\includegraphics[height=\logoheight]{Logos/UPC.png} & \hspace{2mm}
+\includegraphics[height=\logoheight]{Logos/Fundacio-CELLEX.png} & \hspace{2mm}
+\includegraphics[height=\logoheight]{Logos/Fundacio-Mir-Puig.png} 
+\end{tabular}
+&
+\begin{tabular}{llll}
+\multicolumn{4}{l}{\color{icfoblue} \small Supported by: }
+\\ \arrayrulecolor{icfoblue}\hline
+&&& \\[-2mm]
+\includegraphics[height=\logoheight]{Logos/Severo-Ochoa.png} & \hspace{2mm}
+\includegraphics[height=\logoheight]{Logos/MINECO.png} & \hspace{2mm}
+\includegraphics[height=\logoheight]{Logos/UE-FEDER.png} & \hspace{2mm}
+\includegraphics[height=\logoheight]{Logos/ICREA.png} 
+\end{tabular}
+&
+\begin{tabular}{l}
+\color{icfoblue} \small Member of: 
+\\ \arrayrulecolor{icfoblue}\hline
+\\[-2mm]
+\includegraphics[height=\logoheight]{Logos/BIST.png}
+\end{tabular}
+\end{tabular}
+
+\vspace{2mm}
+\footerfont
+ICFO $\cdot$ The Institute of Photonic Sciences | Av. Carl Friedrich Gauss, 3 $\cdot$ Castelldefels $\cdot$ Barcelona
+\end{center}
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
