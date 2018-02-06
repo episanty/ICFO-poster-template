@@ -55,7 +55,7 @@
 \geometry{tmargin=0mm,bmargin=3.5mm,lmargin=9mm,rmargin=9mm}
 
 %%% Sans-serif maths
-\usepackage{arev}
+%\usepackage{arev}
 
 %%% other options that work OK:
 %\usepackage[helvet]{sfmath}
@@ -86,14 +86,16 @@
 
 
 
+\usepackage{sansmathfonts}
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc}
 
+
 \newcommand{\titlefont}{\bf \Huge \color{white}}
-\newcommand{\authorfont}{\bf \Large}
-\newcommand{\headerfont}{\bf \Large}
-\newcommand{\subheaderfont}{\bf \large}
+\newcommand{\authorfont}{\bf \Large \color{white}}
+\newcommand{\headerfont}{\bf \large \color{white}}
+\newcommand{\subheaderfont}{\bf \large }
 \newcommand{\acknowledgementsfont}{\small}
 \newcommand{\footerfont}{\footnotesize}
 
@@ -116,10 +118,10 @@
 \begin{poster}{
     grid=false,
     borderColor=bordercol,
-    headerColorOne=icfogreen,
-    headerColorTwo=icfogreen,
+    headerColorOne=icfoblue,
+    headerColorTwo=icfoblue,
     headerFontColor=headerfontcol,
-    boxColorOne=icfogray1,
+    boxColorOne=white,
     headerheight=0mm,
     boxheaderheight=2em,
     headershape=rectangle,
@@ -166,14 +168,14 @@ name=titlebox, span=2, column=0, row=0, boxheaderheight=0mm,
 %
 { \titlefont 
 %
-Title of the project will go here, font Arial Black BT in size huge 
+Title of the project will go here, font Arial Black BT in size Huge 
 %
 }\\[3mm]
 \setstretch{1.5}
 \textcolor{white}{
 \authorfont
 %
-Names of authors will go here in dark grey using the font Swiss721 Bold BT in size 48 and justified to the left
+Names of authors will go here using the font Arial Bold in size Large
 %
 }\\[2mm]
 \setstretch{1.25}
@@ -212,9 +214,37 @@ Affiliation, departments/groups
 
 \vspace{1mm}
 \footerfont
-ICFO · The Institute of Photonic Sciences | Av. Carl Friedrich Gauss, 3 · Castelldefels · Barcelona
+ICFO $\cdot$ The Institute of Photonic Sciences | Av. Carl Friedrich Gauss, 3 $\cdot$ Castelldefels $\cdot$ Barcelona
 \end{center}
 }
+
+
+%\headerbox{}
+%{name=bottomlogos2, span=2, column=0, boxheaderheight=1.5mm, boxColorOne=white, headerColorOne=white, headerColorTwo=white, above=bottom}{
+%\begin{center}
+%\footerfont
+%ICFO $\cdot$ The Institute of Photonic Sciences | Av. Carl Friedrich Gauss, 3 $\cdot$ Castelldefels $\cdot$ Barcelona
+%\end{center}
+%}
+
+
+%\headerbox{}
+%{name=bottomlogos, span=2, column=0, boxheaderheight=1.5mm, boxColorOne=white, headerColorOne=white, headerColorTwo=white, above=bottomlogos2, aligned=bottom}{
+%\newlength{\logoheight}
+%\setlength{\logoheight}{8mm}
+%\begin{center}
+%\begin{tabular}{cccccccc}
+%\includegraphics[height=\logoheight]{Logos/GeneralitatDeCatalunya.png} & 
+%\includegraphics[height=\logoheight]{Logos/UPC.png} & 
+%\includegraphics[height=\logoheight]{Logos/Fundacio-CELLEX.png} & 
+%\includegraphics[height=\logoheight]{Logos/Fundacio-Mir-Puig.png} & 
+%\includegraphics[height=\logoheight]{Logos/Severo-Ochoa.png} & 
+%\includegraphics[height=\logoheight]{Logos/MINECO.png} & 
+%\includegraphics[height=\logoheight]{Logos/UE-FEDER.png} & 
+%\includegraphics[height=\logoheight]{Logos/ICREA.png} 
+%\end{tabular}
+%\end{center}
+%}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -226,7 +256,7 @@ ICFO · The Institute of Photonic Sciences | Av. Carl Friedrich Gauss, 3 · Cast
 \headerbox{%
 INTRODUCTION OR ABSTRACT
 }{
-name=abstract,span=2,column=0,below=titlebox, headerColorOne=white, headerColorTwo=white, boxColorOne=white
+name=abstract,span=2,column=0,below=titlebox, headerfont={\bf \Large \color{black}}, headerColorOne=white, headerColorTwo=white
 }{
 \textbf{Um volores vendae. Et eliquat qui ratemolorum resti dolupta sequiss inissit dita sum quae dolupta temperchil enihil maximet aut distemporum} auta provita volores ma et et, cor recum quis eium quostrum fuga. Xerae nobitius eos remporem hilia volut ut alitas vitatibea nat as everum eos doluptatem am ut autem dunt officipieni corepeditis nus sunt idis moluptatur
 
@@ -237,7 +267,7 @@ name=abstract,span=2,column=0,below=titlebox, headerColorOne=white, headerColorT
 
 
 
-
+{\bf \large \color{white}}
 
 
 
@@ -271,8 +301,7 @@ though \texttt{\textbackslash{}mathscr} requires some attention and  \texttt{\te
 }
 
 
-\headerbox{}{name=background2, column=0, boxheaderheight=0mm, boxColorOne=icfogray2
-, below=background
+\headerbox{}{name=background2, column=0, boxheaderheight=0mm, below=background
 %, row=0.59 %% use explicit numeric row instead of `below` command to join with the box above. In that case, use an extra \vspace{} on the background box to extend the lower lip.
 }{
 {\subheaderfont
@@ -297,13 +326,12 @@ Nullam in urna lacinia orci consequat dictum. Nam scelerisque, nisl in euismod e
 
 
 \headerbox{RESULTS}
-{name=results, span=1, column=1, row=0, below=abstract, boxColorOne=icfogray3, headerColorOne=black, headerColorTwo=black, headerFontColor=icfogreen}{
+{name=results, span=1, column=1, row=0, below=abstract}{
 \setlength{\parskip}{0.5em}
 
 \begin{multicols}{2}
 
 \small
-\color{white}
 
 Bus qui denis incimaio con reserum quamet aliquam re verspernam alias itatur? Qui sinullo ribuste empore ium ipitem rero miligente solupta temodi assequistium quidenis sene quide pore dolupta por modictur aga acienducid moluptate cum vellupta.
 
@@ -350,8 +378,11 @@ Es ad qui blat iliquis et estem fugia dolum sed quias enis dolore rovid quiscia 
 
 
 
+
 \headerbox{CONCLUSIONS}
-{name=conclusions, span=1, column=0, row=0, below=background2, above=bottomlogos}{
+{name=conclusions, span=1, column=0, row=0, below=background2,
+ above=bottomlogos
+ }{
 \vspace{0.5mm}
 
 \begin{itemize}
@@ -364,10 +395,15 @@ elementum. Quisque vel est nulla.
 }
 
 \headerbox{ACKNOWLEDGEMENTS}
-{name=acknowledgements, span=1, column=1, below=references, above=bottomlogos}{
+{name=acknowledgements, span=1, column=1, below=references, 
+above=bottomlogos
+}{
 \acknowledgementsfont
 Qui denis incimaio con reserum quamet. Qui sinullo ribuste mporeium ium ipitem rero miligente. Solupta temodi assequistium quidenis sequide pore Dolupta por modictur acienducid moluptate cum Vellupta es ad qui blat iliquis et.
 }
+
+
+
 
 \end{poster}
 \end{document}

@@ -125,9 +125,9 @@ Cell[BoxData[{
       RowBox[{"PlotLabel", "\[Rule]", 
        RowBox[{"MaTeX", "[", "\[IndentingNewLine]", 
         RowBox[{
-        "\"\<\\\\color{white}\\\\chi(t)=\\\\cos\\\\mathopen{}\\\\left(\\\\\
-frac{\\\\omega t}{\\\\sqrt{\\\\alpha\\\\gamma}}\\\\right)\\\\mathclose{} = \\\
-\\sum_{n=0}^\\\\infty \\\\frac{(-1)^{2n}}{(2n)!} \\\\frac{(\\\\omega \
+        "\"\<\\\\chi(t)=\\\\cos\\\\mathopen{}\\\\left(\\\\frac{\\\\omega \
+t}{\\\\sqrt{\\\\alpha\\\\gamma}}\\\\right)\\\\mathclose{} = \
+\\\\sum_{n=0}^\\\\infty \\\\frac{(-1)^{2n}}{(2n)!} \\\\frac{(\\\\omega \
 t)^{2n}}{\\\\alpha^{n}\\\\gamma^{n}}\>\"", "\[IndentingNewLine]", ",", 
          RowBox[{"FontSize", "\[Rule]", "12"}], ",", 
          RowBox[{"Magnification", "\[Rule]", "0.45"}]}], 
@@ -145,12 +145,11 @@ t)^{2n}}{\\\\alpha^{n}\\\\gamma^{n}}\>\"", "\[IndentingNewLine]", ",",
                 RowBox[{"#", ",", 
                  RowBox[{"MaTeX", "[", 
                   RowBox[{
-                   RowBox[{"\"\<\\\\color{white}\>\"", "<>", 
-                    RowBox[{"ToString", "[", 
+                   RowBox[{"ToString", "[", 
                     RowBox[{"PaddedForm", "[", 
                     RowBox[{"#", ",", 
                     RowBox[{"{", 
-                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}], "]"}]}], ",", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}], "]"}], ",", 
                    RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
                    RowBox[{"Magnification", "\[Rule]", "0.35"}]}], "]"}], ",", 
                  RowBox[{"{", 
@@ -201,8 +200,7 @@ t)^{2n}}{\\\\alpha^{n}\\\\gamma^{n}}\>\"", "\[IndentingNewLine]", ",",
                  RowBox[{"#", " ", "\[Pi]"}], ",", 
                  RowBox[{"MaTeX", "[", "\[IndentingNewLine]", 
                   RowBox[{
-                   RowBox[{"\"\<\\\\color{white}\>\"", "<>", 
-                    RowBox[{"StringReplace", "[", "\[IndentingNewLine]", 
+                   RowBox[{"StringReplace", "[", "\[IndentingNewLine]", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"ToString", "[", 
@@ -218,7 +216,7 @@ t)^{2n}}{\\\\alpha^{n}\\\\gamma^{n}}\>\"", "\[IndentingNewLine]", ",",
                     
                     RowBox[{
                     "\"\<1\\\\pi\>\"", "\[Rule]", "\"\<\\\\pi\>\""}]}], 
-                    "}"}]}], "]"}]}], "\[IndentingNewLine]", ",", 
+                    "}"}]}], "]"}], "\[IndentingNewLine]", ",", 
                    RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
                    RowBox[{"Magnification", "\[Rule]", "0.35"}]}], "]"}], ",", 
                  RowBox[{"{", 
@@ -266,17 +264,12 @@ t)^{2n}}{\\\\alpha^{n}\\\\gamma^{n}}\>\"", "\[IndentingNewLine]", ",",
        RowBox[{"{", "\[IndentingNewLine]", 
         RowBox[{
          RowBox[{"MaTeX", "[", 
-          RowBox[{
-           RowBox[{
-           "\"\<\\\\color{white}\>\"", "<>", 
-            "\"\<\\\\omega t/\\\\sqrt{\\\\alpha\\\\gamma}\>\""}], ",", 
+          RowBox[{"\"\<\\\\omega t/\\\\sqrt{\\\\alpha\\\\gamma}\>\"", ",", 
            RowBox[{"FontSize", "\[Rule]", "12"}], ",", 
            RowBox[{"Magnification", "\[Rule]", "0.35"}]}], "]"}], ",", 
          "\[IndentingNewLine]", 
          RowBox[{"MaTeX", "[", 
-          RowBox[{
-           RowBox[{"\"\<\\\\color{white}\>\"", "<>", "\"\<\\\\chi(t)\>\""}], 
-           ",", 
+          RowBox[{"\"\<\\\\chi(t)\>\"", ",", 
            RowBox[{"FontSize", "\[Rule]", "12"}], ",", 
            RowBox[{"Magnification", "\[Rule]", "0.35"}]}], "]"}]}], 
         "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", ",", 
@@ -326,14 +319,15 @@ t)^{2n}}{\\\\alpha^{n}\\\\gamma^{n}}\>\"", "\[IndentingNewLine]", ",",
        "\"\<sample-figure.pdf\>\""}], "}"}], "]"}], ",", "figure", ",", 
     RowBox[{"Background", "\[Rule]", "None"}]}], "]"}], "]"}]}], "Input"],
 
-Cell[BoxData["28935"], "Output"]
+Cell[BoxData["28899"], "Output"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1188, 911},
-WindowMargins->{{388, Automatic}, {Automatic, 36}},
+WindowMargins->{{378, Automatic}, {Automatic, 26}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 TrackCellChangeTimes->False,
 FrontEndVersion->"10.0 for Linux x86 (64-bit) (December 4, 2014)",
 StyleDefinitions->"Default.nb"
 ]
+
